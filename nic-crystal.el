@@ -12,7 +12,7 @@ file."
 	 (sub-file (prog2
 		     (string-match (format "%s\\(.*\\)" abs-dir) abs-bf)
 		     (match-string 1 abs-bf)))
-	 (command (format "cd %s ; crystal build %s" dir sub-file)))
+	 (command (format "cd %s ; crystal build --no-color %s" dir sub-file)))
     (make-local-variable 'compile-command)
     (setq compile-command command)))
 
